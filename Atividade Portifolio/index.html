@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☽⛤ Carol’s Mystic Portfólio ⛤☾</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* === Estilo base === */
+    body {
+      background-color: #0b0012;
+      color: #f5e9ff;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* === Fundo cósmico === */    
+    .stars, .twinkling, .glow {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .stars {
+      background: url('https://i.imgur.com/YKY28eT.png') repeat;
+      animation: moveStars 200s linear infinite;
+    }
+
+    .twinkling {
+      background: url('https://i.imgur.com/XYMF4fJ.png') repeat;
+      animation: moveTwinkling 100s linear infinite;
+      opacity: 0.6;
+    }
+
+    .glow {
+      background: radial-gradient(circle at 50% 50%, rgba(176, 98, 255, 0.2), transparent 70%);
+      animation: glowMove 15s ease-in-out infinite alternate;
+      filter: blur(40px);
+    }
+
+    @keyframes moveStars {
+      from {background-position: 0 0;}
+      to {background-position: -10000px 5000px;}
+    }
+
+    @keyframes moveTwinkling {
+      from {background-position: 0 0;}
+      to {background-position: 10000px -5000px;}
+    }
+
+    @keyframes glowMove {
+      0% {transform: translate(-20px, 20px);}
+      50% {transform: translate(40px, -30px);}
+      100% {transform: translate(-20px, 10px);}
+    }
+
+   /* === Títulos e texto === */
+    h1, h2, h3 {
+      color: #e601eeb9;
+      font-family: 'Marcellus SC', serif;
+      text-shadow: 0 0 20px #b96cff;
+      animation: fadeInDown 2s ease;
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* === Navbar === */
+    .navbar {
+      background-color: #16002b; !important;
+      box-shadow: 0 0 20px #a46cff77;
+    }
+
+    /* === Cartões === */
+    .card {
+      background-color: #24003d;
+      color: #f1e6ff;
+      border: 1px solid #b46cff;
+      box-shadow: 0 0 15px #b46cff55;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 0 25px #cfa4ffcc;
+    }
+
+    /* === Botões === */
+    
+    .btn-mistico {
+      background-color: #b46cff;
+      color: #1a0026;
+      border: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #b46cff77;
+      transition: 0.4s;
+    }
+
+    .btn-mistico:hover {
+      background-color: #d6b3ff;
+      box-shadow: 0 0 25px #d6b3ffcc;
+      color: #1a0026;
+    }
+
+    /* === Aura nas imagens === */
+    
+    .aura {
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    .aura::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg, transparent 0deg, #cfa4ff33 120deg, transparent 240deg);
+      animation: spin 6s linear infinite;
+    }
+
+    @keyframes spin {
+      to {transform: rotate(360deg);}
+    }
+
+    /* === Footer === */
+
+    footer {
+      background-color: #16002b;
+      box-shadow: 0 -2px 15px #b46cff55;
+    }
+
+    footer a {
+      transition: 0.3s;
+    }
+    footer a:hover {
+      color: #cfa4ff;
+      text-shadow: 0 0 10px #cfa4ff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Fundo estelar -->
+   
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  <div class="glow"></div> 
+
+  <!-- Cabeçalho -->
+
+  <div class="bg-image text-center" style="background-image: url('https://images.stockcake.com/public/4/2/0/420e40dd-ce1d-4af9-b702-82af2fc462e6_large/mystical-tarot-reading-stockcake.jpg'); height: 400px; background-size: cover; background-position: center;">
+    <div class="mask d-flex justify-content-center align-items-center h-100" style="background-color: rgba(0,0,0,0.7);">
+      <h1 class="fw-bold">☽⛤ Carol’s Mystic Portfólio ⛤☾</h1>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-light" href="#">☽ Sobre Mim ☾</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="menu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="#projetos" class="nav-link text-light">Projetos</a></li>
+          <li class="nav-item"><a href="#contato" class="nav-link text-light">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carrossel -->
+
+
+  <div id="motivacional" class="carousel slide mt-3" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429" class="d-block w-100" style="height:450px; object-fit:cover;">
+        <div class="carousel-caption">
+          <h3>✨ "Crie a sua realidade" ✨</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" class="d-block w-100" style="height:450px; object-fit:cover;">
+        <div class="carousel-caption">
+          <h3>☽ "Transforme o caos em criação, a dúvida em força e o medo em fé." ☾</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/1251800/pexels-photo-1251800.jpeg" class="d-block w-100" style="height:450px; object-fit:cover;">
+        <div class="carousel-caption">
+          <h3>🔮 "A magia acontece quando você acredita em si mesmo (a)." 🔮</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sobre mim -->
+   
+  <section class="container mt-5 text-center">
+    <img src="https://avatars.githubusercontent.com/u/228718361?s=400" class="rounded-circle mb-3 aura" width="180">
+    <h2>Carolina Freitas</h2>
+    <p class="lead">🌙 Estudande de Desenvolvimento Front-End • Estudante de Oráculos • Exploradora da magia e da lógica</p>
+    <p>Entre o digital e o místico, busco unir intuição e razão, criando experiências que traduzem a beleza do invisível em interfaces tangíveis.</p>
+    <a href="https://www.linkedin.com/in/carolinafrssilva" target="_blank" class="btn btn-mistico">Ver Perfil</a>
+  </section>
+
+  <!-- Portfólio -->
+
+  <section id="projetos" class="container mt-5">
+    <h2 class="text-center mb-4">✨Projetos✨</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Portal dos Elementos</h5>
+            <p>Site interativo inspirado nos quatro elementos da natureza.</p>
+            <a href="#" class="btn btn-mistico">Ver Projeto</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://images.stockcake.com/public/2/a/b/2ab3cd2f-37a9-4db7-97dd-c8dc9045baab_large/mystical-tarot-spread-stockcake.jpg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Editora Graficos Unidos</h5>
+            <p>Loja com venda de livros e artigos esotéricos.</p>
+            <a href="#" class="btn btn-mistico">Ver Projeto</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://images.stockcake.com/public/b/3/3/b33f187c-78b1-4160-bf1d-6ad80bee7662_large/mystical-rune-selection-stockcake.jpg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Runas Digitais</h5>
+            <p>Gerador simbólico de runas com significados personalizados.</p>
+            <a href="#" class="btn btn-mistico">Ver Projeto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="p-5 text-center">
+    <h2>☽ Entre em Contato ☾</h2>
+    <div class="container">
+      <form class="mt-4 mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Seu nome">
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Seu e-mail">
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Sua mensagem"></textarea>
+        </div>
+        <button class="btn btn-mistico">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="text-center text-light py-3">
+    <p>© 2025 ✨ Carol’s Mystic Portfólio ✨ • Todos os direitos reservados</p>
+    <div>
+      <a href="https://github.com/carolinafrss" class="text-light fs-3 mx-2"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/carolinafrssilva" class="text-light fs-3 mx-2"><i class="bi bi-linkedin"></i></a>
+      <a href="https://www.instagram.com/carolinafrssilva?igsh=Nm1ic29uMGt4NjZ0" class="text-light fs-3 mx-2"><i class="bi bi-instagram"></i></a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

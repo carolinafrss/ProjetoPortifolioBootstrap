@@ -1,0 +1,24 @@
+{
+  "name": "atividade-portifolio",
+  "version": "1.0.0",
+  "description": "Projeto do Portofolio em Bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carolinafrss/ProjetoPortifolioBootstrap.git"
+  },
+  "author": "Carolina Freitas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carolinafrss/ProjetoPortifolioBootstrap/issues"
+  },
+  "homepage": "https://github.com/carolinafrss/ProjetoPortifolioBootstrap#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "express": "^5.1.0"
+  },
+  "keywords": []
+}
